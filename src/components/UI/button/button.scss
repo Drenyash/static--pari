@@ -1,0 +1,22 @@
+.button {
+  display: flex;
+  justify-content: center;
+  padding: 9px 33px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  text-transform: uppercase;
+  color: $primary;
+  text-align: center;
+  border: 1px solid $primary;
+  cursor: pointer;
+
+  &--field {
+    background-color: $primary;
+    color: $light;
+  }
+
+  &__transparent {
+    background-color: transparent;
+  }
+}

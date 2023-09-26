@@ -1,0 +1,12 @@
+.body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    font-family: $font-main;
+    font-size: 16px;
+    font-weight: 400;
+    color: $gray-dark;
+    background-color: $gray-light;
+    overflow-x: hidden;
+}

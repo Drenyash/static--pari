@@ -1,0 +1,21 @@
+.favourite {
+  position: absolute;
+  top: 35px;
+  right: 35px;
+  display: flex;
+  cursor: pointer;
+  z-index: 2;
+
+  &.active {
+    .favourite__icon {
+      fill: $primary
+    }
+  }
+
+  &__icon {
+    display: flex;
+    width: 22px;
+    height: 20px;
+    fill: $gray-outline;
+  }
+}

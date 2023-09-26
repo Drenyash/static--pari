@@ -1,0 +1,46 @@
+.breadcrumbs {
+  padding: 30px 0;
+  margin-bottom: 18px;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    display: flex;
+
+    &:not(&:first-child) {
+      &::before {
+        content: '';
+        display: flex;
+        width: 1px;
+        height: 100%;
+        background-color: $gray-outline;
+      }
+    }
+  }
+
+  &__link,
+  &__current {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 0 10px;
+    font-size: 14px;
+    font-weight: 400;
+    color: $gray;
+
+    &--back {
+      padding-left: 0;
+      color: $primary;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    width: 8px;
+    height: 5px;
+    transform: rotate(90deg);
+    fill: $primary;
+  }
+}

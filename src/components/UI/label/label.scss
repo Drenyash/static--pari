@@ -1,0 +1,23 @@
+.label {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  display: flex;
+  padding: 4px 10px;
+  font-family: $font-second;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: 0.7px;
+  color: $light;
+  border-radius: 5px;
+  background-color: $text;
+
+  &--new {
+    background-color: $primary;
+  }
+
+  &--promotion {
+    background-color: $teal;
+  }
+}

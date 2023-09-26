@@ -1,0 +1,95 @@
+.filter {
+  position: sticky;
+  top: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 360px;
+
+  @include r(1530) {
+    max-width: 285px;
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 25px 0;
+    &:not(&:last-of-type) {
+      border-bottom: 1px solid $gray-outline;
+    }
+
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 130%;
+    text-transform: uppercase;
+    color: $gray-dark;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &--column {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    &.active {
+      .filter__title {
+        color: $primary;
+      }
+      .filter__icon {
+        transform: rotate(180deg);
+      }
+      .filter__dropdown {
+        display: flex;
+      }
+    }
+  }
+
+  &__dropdown {
+    display: none;
+  }
+
+  &__icon {
+    display: flex;
+    width: 14px;
+    height: 8px;
+    fill: $gray;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  &__link {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 30px;
+    color: $gray;
+  }
+}

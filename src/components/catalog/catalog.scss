@@ -1,0 +1,28 @@
+.catalog {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-size: 32px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: $blue;
+  }
+
+  &__wrapper {
+    display: grid;
+    gap: 40px 30px;
+    grid-template-columns: repeat(3, minmax(285px, 360px));
+    margin-bottom: 90px;
+    @include r(1530) {
+      margin-bottom: 50px;
+    }
+  }
+}

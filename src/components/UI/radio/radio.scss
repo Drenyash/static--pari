@@ -1,0 +1,22 @@
+.radio {
+  display: flex;
+  cursor: pointer;
+
+  span {
+    padding: 5px 14px;
+    font-family: $font-second;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.7px;
+    color: $gray;
+    border-radius: 30px;
+    border: 1px solid $gray;
+    transition: .2s linear;
+  }
+
+  input:checked ~ span {
+    background-color: $primary;
+    color: $light;
+    border-color: $primary;
+  }
+}

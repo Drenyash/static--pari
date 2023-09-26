@@ -1,0 +1,18 @@
+.sort {
+  display: flex;
+  align-items: center;
+  gap: 110px;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__text {
+    font-family: $font-second;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.7px;
+  }
+}

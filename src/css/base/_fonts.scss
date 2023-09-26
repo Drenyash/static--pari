@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap');
+
+@font-face {
+  font-display: swap;
+  font-family: 'Buyan';
+  src: url('../assets/fonts/BuyanBold.ttf') format('truetype'),
+  url('../assets/fonts/BuyanBold.woff') format('woff'),
+  url('../assets/fonts/BuyanBold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Buyan';
+  src: url('../assets/fonts/BuyanRegular.ttf') format('truetype'),
+  url('../assets/fonts/BuyanRegular.woff') format('woff'),
+  url('../assets/fonts/BuyanRegular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}

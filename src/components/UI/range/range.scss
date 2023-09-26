@@ -1,0 +1,51 @@
+.range {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  &__toolbox {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+  }
+
+  &__line {
+    display: flex;
+    width: 12px;
+    height: 1px;
+    background-color: $gray-outline;
+  }
+
+  &__item {
+    display: flex;
+    width: 100px;
+    border: 1px solid $gray-outline;
+    border-radius: 30px;
+    overflow: hidden;
+
+    input {
+      display: flex;
+      padding: 5px 16px;
+      width: 100%;
+      height: 100%;
+      font-family: $font-second;
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: 0.7px;
+      color: $gray-dark;
+      appearance: none;
+
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+      }
+    }
+  }
+
+  &__price {
+    font-family: $font-second;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+  }
+}
