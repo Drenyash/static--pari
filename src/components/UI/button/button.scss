@@ -1,6 +1,8 @@
 .button {
   display: flex;
   justify-content: center;
+  align-items: center;
+  gap: 10px;
   padding: 9px 33px;
   font-size: 20px;
   font-weight: 400;
@@ -10,13 +12,135 @@
   text-align: center;
   border: 1px solid $primary;
   cursor: pointer;
+  transition: .2s linear;
 
   &--field {
     background-color: $primary;
     color: $light;
+    &:hover {
+      background-color: $primary-light;
+    }
   }
 
-  &__transparent {
+  &--transparent {
     background-color: transparent;
+  }
+
+  &--outline {
+    position: relative;
+    border: none;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-left: 2px solid $primary;
+    border-right: 2px solid $primary;
+    transition: .2s linear;
+
+    .button__icon {
+      fill: $primary;
+    }
+
+    &:hover {
+      color: $light;
+      background-color: $primary;
+
+      .button__icon {
+        fill: $light;
+      }
+
+      .button__line-top {
+        &::before {
+          width: 0;
+        }
+
+        &::after {
+          width: 100%;
+        }
+      }
+
+      .button__line-bottom {
+        &::before {
+          width: 100%;
+        }
+
+        &::after {
+          width: 0;
+        }
+      }
+    }
+
+    .button__line-top {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 0;
+
+      &::before {
+        content: "";
+        display: flex;
+        width: 10%;
+        height: 2px;
+        background-color: $primary;
+        transition: .2s ease-in-out;
+      }
+
+      &::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        content: "";
+        display: flex;
+        width: 80%;
+        height: 2px;
+        background-color: $primary;
+        transition: .2s ease-in-out;
+      }
+    }
+
+    .button__line-bottom {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      z-index: 0;
+
+      &::before {
+        content: "";
+        display: flex;
+        width: 80%;
+        height: 2px;
+        background-color: $primary;
+        transition: .2s ease-in-out;
+      }
+
+      &::after {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        content: "";
+        display: flex;
+        width: 10%;
+        height: 2px;
+        background-color: $primary;
+        transition: .2s ease-in-out;
+      }
+    }
+  }
+
+  &__icon {
+    display: flex;
+    width: 22px;
+    height: 20px;
+    pointer-events: none;
+    fill: $light;
+  }
+
+  &--reset {
+    position: absolute;
+    top: 42px;
+    left: calc(50% + 110px);
+    padding: 0;
+    border: none;
+    transform: translateX(-50%);
   }
 }

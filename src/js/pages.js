@@ -18,10 +18,18 @@ module.exports = [
         temp
     }),
     new HtmlWebpackPlugin({
-        template: "./src/pages/product-card.html",
-        filename: "product-card.html",
+        template: "./src/pages/product-page.html",
+        filename: "product-page.html",
         inject: "body",
         title: "Карточка товара",
+        head,
+        temp
+    }),
+    new HtmlWebpackPlugin({
+        template: "./src/pages/blocks.html",
+        filename: "blocks.html",
+        inject: "body",
+        title: "Блоки на сайте",
         head,
         temp
     })

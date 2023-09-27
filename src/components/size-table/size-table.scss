@@ -1,0 +1,45 @@
+.size-table {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  width: 1010px;
+  height: 1060px;
+  background-color: $light;
+
+  &__head {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    color: $gray;
+  }
+
+  &__block {
+    display: flex;
+    gap: 47px;
+  }
+
+  table {
+    width: 100%;
+    max-width: 720px;
+    text-align: center;
+    tr {
+      display: flex;
+      &:nth-child(odd) {
+        background-color: $gray-light;
+      }
+    }
+    td {
+      display: flex;
+      justify-content: center;
+      padding: 19px 12px;
+      width: calc(100% / 7);
+      font-family: $font-second;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: 0.8px;
+      color: $gray;
+    }
+  }
+}

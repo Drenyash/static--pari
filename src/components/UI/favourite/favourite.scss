@@ -6,6 +6,11 @@
   cursor: pointer;
   z-index: 2;
 
+  @include r(1229) {
+    top: 12px;
+    right: 12px;
+  }
+
   &.active {
     .favourite__icon {
       fill: $primary
@@ -17,5 +22,10 @@
     width: 22px;
     height: 20px;
     fill: $gray-outline;
+
+    @include r(1229) {
+      width: 14px;
+      height: 12px;
+    }
   }
 }

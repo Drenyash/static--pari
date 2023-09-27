@@ -6,7 +6,11 @@
     padding-left: rem(15);
     padding-right: rem(15);
 
-    @include r(1530) {
+    @include r(1529) {
         max-width: rem(1260);
+    }
+
+    @include r(1229) {
+        padding: 0;
     }
 }

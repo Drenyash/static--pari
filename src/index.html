@@ -32,10 +32,10 @@
       </div>
     </div>
   </section>
-  <section class="section pb-100">
+  <section class="section pb-100 pbm-30">
     <div class="container">
       <div class="wrapper">
-        <form class="filter">
+        <form class="filter mob-hidden">
           <fieldset class="filter__block">
             <div class="filter__item">
               <div class="filter__head">
@@ -125,15 +125,15 @@
             </div>
           </fieldset>
           <fieldset class="filter__block">
-            <h2 class="filter__title">Цена</h2>
+            <h2 class="filter__title mb-50">Цена</h2>
             <div class="filter__inner">
               <div class="range">
                 <div class="range__toolbox">
-                  <label class="range__item">
+                  <label class="range__item range__item--before">
                     <input type="number" value="500" min="500" max="55500">
                   </label>
                   <div class="range__line"></div>
-                  <label class="range__item">
+                  <label class="range__item range__item--after">
                     <input type="number" value="55500" min="500" max="55500">
                   </label>
                 </div>
@@ -146,32 +146,178 @@
             <button class="button button__transparent" type="reset">Сбросить</button>
           </div>
         </form>
+        <div class="filter-mobile">
+          <h2 class="filter-mobile__title">Фильтр</h2>
+          <form class="filter">
+            <fieldset class="filter__block">
+              <a href="#" class="filter__title">Все категории</a>
+            </fieldset>
+            <fieldset class="filter__block">
+              <div class="filter__item">
+                <div class="filter__head">
+                  <h2 class="filter__title">Игровая форма 22/23</h2>
+                  <svg class="filter__icon">
+                    <use xlink:href="./assets/sprite/sprite.svg#icon-arrow"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="filter__item active">
+                <div class="filter__head">
+                  <h2 class="filter__title">Тренировочная форма взрослая</h2>
+                  <svg class="filter__icon">
+                    <use xlink:href="./assets/sprite/sprite.svg#icon-arrow"></use>
+                  </svg>
+                </div>
+                <div class="filter__dropdown">
+                  <ul class="filter__list">
+                    <li class="filter__element">
+                      <a href="#" class="filter__link">Свитера</a>
+                    </li>
+                    <li class="filter__element">
+                      <a href="#" class="filter__link">Брюки и шорты</a>
+                    </li>
+                    <li class="filter__element">
+                      <a href="#" class="filter__link">Футболки</a>
+                    </li>
+                    <li class="filter__element">
+                      <a href="#" class="filter__link">Куртки</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="filter__item">
+                <div class="filter__head">
+                  <h2 class="filter__title">Тренировочная форма детская</h2>
+                  <svg class="filter__icon">
+                    <use xlink:href="./assets/sprite/sprite.svg#icon-arrow"></use>
+                  </svg>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="filter__block">
+              <h2 class="filter__title">Пол</h2>
+              <div class="filter__inner">
+                <label class="radio">
+                  <input type="radio" class="hidden" checked name="sex" value="unisex">
+                  <span>Унисекс</span>
+                </label>
+                <label class="radio">
+                  <input type="radio" class="hidden" name="sex" value="male">
+                  <span>Муж</span>
+                </label>
+                <label class="radio">
+                  <input type="radio" class="hidden" name="sex" value="female">
+                  <span>Жен</span>
+                </label>
+              </div>
+            </fieldset>
+            <fieldset class="filter__block">
+              <h2 class="filter__title">размер одежды</h2>
+              <div class="filter__inner filter__inner--column">
+                <label class="checkbox">
+                  <input type="checkbox" name="">
+                  <span>XS</span>
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" name="">
+                  <span>S</span>
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" name="">
+                  <span>M</span>
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" name="">
+                  <span>L</span>
+                </label>
+                <label class="checkbox checkbox--disabled">
+                  <input type="checkbox" name="" disabled>
+                  <span>XL</span>
+                </label>
+                <label class="checkbox checkbox--disabled">
+                  <input type="checkbox" name="" disabled>
+                  <span>XXL</span>
+                </label>
+              </div>
+            </fieldset>
+            <fieldset class="filter__block">
+              <h2 class="filter__title mb-50">Цена</h2>
+              <div class="filter__inner">
+                <div class="range">
+                  <div class="range__toolbox">
+                    <label class="range__item range__item--before">
+                      <input type="number" value="500" min="500" max="55500">
+                    </label>
+                    <div class="range__line"></div>
+                    <label class="range__item range__item--after">
+                      <input type="number" value="55500" min="500" max="55500">
+                    </label>
+                  </div>
+                  <p class="range__price">₽</p>
+                </div>
+              </div>
+            </fieldset>
+            <div class="toolbox">
+              <button class="button button--field" type="submit">Показать</button>
+              <button class="button button--reset" type="reset">Сбросить</button>
+            </div>
+          </form>
+        </div>
         <div class="catalog">
           <div class="catalog__header">
             <h1 class="catalog__title">Экипировка</h1>
-            <div class="sort">
+            <div class="sort mob-hidden">
               <div class="sort__item">
                 <p class="sort__text">Показать по:</p>
-                <select name="count" class="select">
-                  <option value="16">16</option>
-                  <option value="32">32</option>
-                </select>
+                <div class="select">
+                  <select name="count" class="select__wrapper">
+                    <option value="16">16</option>
+                    <option value="32">32</option>
+                  </select>
+                  <svg class="select__icon">
+                    <use xlink:href="./assets/sprite/sprite.svg#icon-arrow"></use>
+                  </svg>
+                </div>
               </div>
               <div class="sort__item">
                 <p class="sort__text">Сортировать по:</p>
-                <select name="sort-type" class="select">
-                  <option value="popular">По популярности</option>
-                  <option value="16">По популярности</option>
-                  <option value="16">По популярности</option>
-                  <option value="16">По популярности</option>
-                  <option value="16">По популярности</option>
-                </select>
+                <div class="select">
+                  <select name="sort-type" class="select__wrapper">
+                    <option value="popular">По популярности</option>
+                    <option value="first-promotion">Сначала акции</option>
+                    <option value="first-new">Сначала новинки</option>
+                    <option value="price-to-low">По наименьшей цене</option>
+                    <option value="price-to-high">По наибольшей цене</option>
+                  </select>
+                  <svg class="select__icon">
+                    <use xlink:href="./assets/sprite/sprite.svg#icon-arrow"></use>
+                  </svg>
+                </div>
               </div>
+            </div>
+            <div class="sort-mobile">
+              <div class="select">
+                <select name="sort-type" class="select__wrapper">
+                  <option value="popular">По популярности</option>
+                  <option value="first-promotion">Сначала акции</option>
+                  <option value="first-new">Сначала новинки</option>
+                  <option value="price-to-low">По наименьшей цене</option>
+                  <option value="price-to-high">По наибольшей цене</option>
+                </select>
+                <svg class="select__icon">
+                  <use xlink:href="./assets/sprite/sprite.svg#icon-arrow"></use>
+                </svg>
+              </div>
+              <button class="open-filter">
+                <svg class="open-filter__icon">
+                  <use xlink:href="./assets/sprite/sprite.svg#icon-settings"></use>
+                </svg>
+              </button>
             </div>
           </div>
           <div class="catalog__wrapper">
-            <article class="product-card">
-              <div class="product-card__picture">
+            <article class="card">
+              <div class="card__picture">
                 <img src="https://placehold.co/600x400" alt="">
                 <p class="label label--new">Новинка</p>
                 <button class="favourite active">
@@ -179,10 +325,10 @@
                     <use xlink:href="./assets/sprite/sprite.svg#icon-heart"></use>
                   </svg>
                 </button>
-                <div class="product-card__detail">
-                  <div class="product-card__inner">
-                    <p class="product-card__text">Размеры:</p>
-                    <div class="product-card__size">
+                <div class="card__detail">
+                  <div class="card__inner">
+                    <p class="card__text">Размеры:</p>
+                    <div class="card__size size">
                       <label class="checkbox checkbox--circle">
                         <input type="checkbox" name="product-size">
                         <span>XS</span>
@@ -200,15 +346,19 @@
                         <span>L</span>
                       </label>
                     </div>
-                    <a href="#" class="button">Подробнее</a>
+                    <a href="#" class="button button--outline">
+                      <span class="button__line-top"></span>
+                      Подробнее
+                      <span class="button__line-bottom"></span>
+                    </a>
                   </div>
                 </div>
               </div>
-              <h3 class="product-card__name">Футболка голубая мужская</h3>
-              <p class="product-card__price"><span>2580</span>₽</p>
+              <h3 class="card__name">Футболка голубая мужская</h3>
+              <p class="price"><span>2580</span>₽</p>
             </article>
-            <article class="product-card">
-              <div class="product-card__picture">
+            <article class="card">
+              <div class="card__picture">
                 <img src="https://placehold.co/600x400" alt="">
                 <p class="label label--promotion">Акция</p>
                 <button class="favourite">
@@ -216,10 +366,10 @@
                     <use xlink:href="./assets/sprite/sprite.svg#icon-heart"></use>
                   </svg>
                 </button>
-                <div class="product-card__detail">
-                  <div class="product-card__inner">
-                    <p class="product-card__text">Размеры:</p>
-                    <div class="product-card__size">
+                <div class="card__detail">
+                  <div class="card__inner">
+                    <p class="card__text">Размеры:</p>
+                    <div class="card__size size">
                       <label class="checkbox checkbox--circle">
                         <input type="checkbox" name="product-size">
                         <span>XS</span>
@@ -237,25 +387,29 @@
                         <span>L</span>
                       </label>
                     </div>
-                    <a href="#" class="button">Подробнее</a>
+                    <a href="#" class="button button--outline">
+                      <span class="button__line-top"></span>
+                      Подробнее
+                      <span class="button__line-bottom"></span>
+                    </a>
                   </div>
                 </div>
               </div>
-              <h3 class="product-card__name">Футболка голубая мужская</h3>
-              <p class="product-card__price"><span>2580</span>₽</p>
+              <h3 class="card__name">Футболка голубая мужская</h3>
+              <p class="price"><span>2580</span>₽</p>
             </article>
-            <article class="product-card">
-              <div class="product-card__picture">
+            <article class="card">
+              <div class="card__picture">
                 <img src="https://placehold.co/600x400" alt="">
                 <button class="favourite">
                   <svg class="favourite__icon">
                     <use xlink:href="./assets/sprite/sprite.svg#icon-heart"></use>
                   </svg>
                 </button>
-                <div class="product-card__detail">
-                  <div class="product-card__inner">
-                    <p class="product-card__text">Размеры:</p>
-                    <div class="product-card__size">
+                <div class="card__detail">
+                  <div class="card__inner">
+                    <p class="card__text">Размеры:</p>
+                    <div class="card__size size">
                       <label class="checkbox checkbox--circle">
                         <input type="checkbox" name="product-size">
                         <span>XS</span>
@@ -273,25 +427,29 @@
                         <span>L</span>
                       </label>
                     </div>
-                    <a href="#" class="button">Подробнее</a>
+                    <a href="#" class="button button--outline">
+                      <span class="button__line-top"></span>
+                      Подробнее
+                      <span class="button__line-bottom"></span>
+                    </a>
                   </div>
                 </div>
               </div>
-              <h3 class="product-card__name">Футболка голубая мужская</h3>
-              <p class="product-card__price"><span>2580</span>₽</p>
+              <h3 class="card__name">Футболка голубая мужская</h3>
+              <p class="price"><span>2580</span>₽</p>
             </article>
-            <article class="product-card">
-              <div class="product-card__picture">
+            <article class="card">
+              <div class="card__picture">
                 <img src="https://placehold.co/600x400" alt="">
                 <button class="favourite">
                   <svg class="favourite__icon">
                     <use xlink:href="./assets/sprite/sprite.svg#icon-heart"></use>
                   </svg>
                 </button>
-                <div class="product-card__detail">
-                  <div class="product-card__inner">
-                    <p class="product-card__text">Размеры:</p>
-                    <div class="product-card__size">
+                <div class="card__detail">
+                  <div class="card__inner">
+                    <p class="card__text">Размеры:</p>
+                    <div class="card__size size">
                       <label class="checkbox checkbox--circle">
                         <input type="checkbox" name="product-size">
                         <span>XS</span>
@@ -309,25 +467,29 @@
                         <span>L</span>
                       </label>
                     </div>
-                    <a href="#" class="button">Подробнее</a>
+                    <a href="#" class="button button--outline">
+                      <span class="button__line-top"></span>
+                      Подробнее
+                      <span class="button__line-bottom"></span>
+                    </a>
                   </div>
                 </div>
               </div>
-              <h3 class="product-card__name">Футболка голубая мужская</h3>
-              <p class="product-card__price"><span>2580</span>₽</p>
+              <h3 class="card__name">Футболка голубая мужская</h3>
+              <p class="price"><span>2580</span>₽</p>
             </article>
-            <article class="product-card">
-              <div class="product-card__picture">
+            <article class="card">
+              <div class="card__picture">
                 <img src="https://placehold.co/600x400" alt="">
                 <button class="favourite">
                   <svg class="favourite__icon">
                     <use xlink:href="./assets/sprite/sprite.svg#icon-heart"></use>
                   </svg>
                 </button>
-                <div class="product-card__detail">
-                  <div class="product-card__inner">
-                    <p class="product-card__text">Размеры:</p>
-                    <div class="product-card__size">
+                <div class="card__detail">
+                  <div class="card__inner">
+                    <p class="card__text">Размеры:</p>
+                    <div class="card__size size">
                       <label class="checkbox checkbox--circle">
                         <input type="checkbox" name="product-size">
                         <span>XS</span>
@@ -345,25 +507,29 @@
                         <span>L</span>
                       </label>
                     </div>
-                    <a href="#" class="button">Подробнее</a>
+                    <a href="#" class="button button--outline">
+                      <span class="button__line-top"></span>
+                      Подробнее
+                      <span class="button__line-bottom"></span>
+                    </a>
                   </div>
                 </div>
               </div>
-              <h3 class="product-card__name">Футболка голубая мужская</h3>
-              <p class="product-card__price"><span>2580</span>₽</p>
+              <h3 class="card__name">Футболка голубая мужская</h3>
+              <p class="price"><span>2580</span>₽</p>
             </article>
-            <article class="product-card">
-              <div class="product-card__picture">
+            <article class="card">
+              <div class="card__picture">
                 <img src="https://placehold.co/600x400" alt="">
                 <button class="favourite">
                   <svg class="favourite__icon">
                     <use xlink:href="./assets/sprite/sprite.svg#icon-heart"></use>
                   </svg>
                 </button>
-                <div class="product-card__detail">
-                  <div class="product-card__inner">
-                    <p class="product-card__text">Размеры:</p>
-                    <div class="product-card__size">
+                <div class="card__detail">
+                  <div class="card__inner">
+                    <p class="card__text">Размеры:</p>
+                    <div class="card__size size">
                       <label class="checkbox checkbox--circle">
                         <input type="checkbox" name="product-size">
                         <span>XS</span>
@@ -381,25 +547,29 @@
                         <span>L</span>
                       </label>
                     </div>
-                    <a href="#" class="button">Подробнее</a>
+                    <a href="#" class="button button--outline">
+                      <span class="button__line-top"></span>
+                      Подробнее
+                      <span class="button__line-bottom"></span>
+                    </a>
                   </div>
                 </div>
               </div>
-              <h3 class="product-card__name">Футболка голубая мужская</h3>
-              <p class="product-card__price"><span>2580</span>₽</p>
+              <h3 class="card__name">Футболка голубая мужская</h3>
+              <p class="price"><span>2580</span>₽</p>
             </article>
-            <article class="product-card">
-              <div class="product-card__picture">
+            <article class="card">
+              <div class="card__picture">
                 <img src="https://placehold.co/600x400" alt="">
                 <button class="favourite">
                   <svg class="favourite__icon">
                     <use xlink:href="./assets/sprite/sprite.svg#icon-heart"></use>
                   </svg>
                 </button>
-                <div class="product-card__detail">
-                  <div class="product-card__inner">
-                    <p class="product-card__text">Размеры:</p>
-                    <div class="product-card__size">
+                <div class="card__detail">
+                  <div class="card__inner">
+                    <p class="card__text">Размеры:</p>
+                    <div class="card__size size">
                       <label class="checkbox checkbox--circle">
                         <input type="checkbox" name="product-size">
                         <span>XS</span>
@@ -417,25 +587,29 @@
                         <span>L</span>
                       </label>
                     </div>
-                    <a href="#" class="button">Подробнее</a>
+                    <a href="#" class="button button--outline">
+                      <span class="button__line-top"></span>
+                      Подробнее
+                      <span class="button__line-bottom"></span>
+                    </a>
                   </div>
                 </div>
               </div>
-              <h3 class="product-card__name">Футболка голубая мужская</h3>
-              <p class="product-card__price"><span>2580</span>₽</p>
+              <h3 class="card__name">Футболка голубая мужская</h3>
+              <p class="price"><span>2580</span>₽</p>
             </article>
-            <article class="product-card">
-              <div class="product-card__picture">
+            <article class="card">
+              <div class="card__picture">
                 <img src="https://placehold.co/600x400" alt="">
                 <button class="favourite">
                   <svg class="favourite__icon">
                     <use xlink:href="./assets/sprite/sprite.svg#icon-heart"></use>
                   </svg>
                 </button>
-                <div class="product-card__detail">
-                  <div class="product-card__inner">
-                    <p class="product-card__text">Размеры:</p>
-                    <div class="product-card__size">
+                <div class="card__detail">
+                  <div class="card__inner">
+                    <p class="card__text">Размеры:</p>
+                    <div class="card__size size">
                       <label class="checkbox checkbox--circle">
                         <input type="checkbox" name="product-size">
                         <span>XS</span>
@@ -453,25 +627,29 @@
                         <span>L</span>
                       </label>
                     </div>
-                    <a href="#" class="button">Подробнее</a>
+                    <a href="#" class="button button--outline">
+                      <span class="button__line-top"></span>
+                      Подробнее
+                      <span class="button__line-bottom"></span>
+                    </a>
                   </div>
                 </div>
               </div>
-              <h3 class="product-card__name">Футболка голубая мужская</h3>
-              <p class="product-card__price"><span>2580</span>₽</p>
+              <h3 class="card__name">Футболка голубая мужская</h3>
+              <p class="price"><span>2580</span>₽</p>
             </article>
-            <article class="product-card">
-              <div class="product-card__picture">
+            <article class="card">
+              <div class="card__picture">
                 <img src="https://placehold.co/600x400" alt="">
                 <button class="favourite">
                   <svg class="favourite__icon">
                     <use xlink:href="./assets/sprite/sprite.svg#icon-heart"></use>
                   </svg>
                 </button>
-                <div class="product-card__detail">
-                  <div class="product-card__inner">
-                    <p class="product-card__text">Размеры:</p>
-                    <div class="product-card__size">
+                <div class="card__detail">
+                  <div class="card__inner">
+                    <p class="card__text">Размеры:</p>
+                    <div class="card__size size">
                       <label class="checkbox checkbox--circle">
                         <input type="checkbox" name="product-size">
                         <span>XS</span>
@@ -489,25 +667,29 @@
                         <span>L</span>
                       </label>
                     </div>
-                    <a href="#" class="button">Подробнее</a>
+                    <a href="#" class="button button--outline">
+                      <span class="button__line-top"></span>
+                      Подробнее
+                      <span class="button__line-bottom"></span>
+                    </a>
                   </div>
                 </div>
               </div>
-              <h3 class="product-card__name">Футболка голубая мужская</h3>
-              <p class="product-card__price"><span>2580</span>₽</p>
+              <h3 class="card__name">Футболка голубая мужская</h3>
+              <p class="price"><span>2580</span>₽</p>
             </article>
-            <article class="product-card">
-              <div class="product-card__picture">
+            <article class="card">
+              <div class="card__picture">
                 <img src="https://placehold.co/600x400" alt="">
                 <button class="favourite">
                   <svg class="favourite__icon">
                     <use xlink:href="./assets/sprite/sprite.svg#icon-heart"></use>
                   </svg>
                 </button>
-                <div class="product-card__detail">
-                  <div class="product-card__inner">
-                    <p class="product-card__text">Размеры:</p>
-                    <div class="product-card__size">
+                <div class="card__detail">
+                  <div class="card__inner">
+                    <p class="card__text">Размеры:</p>
+                    <div class="card__size size">
                       <label class="checkbox checkbox--circle">
                         <input type="checkbox" name="product-size">
                         <span>XS</span>
@@ -525,25 +707,29 @@
                         <span>L</span>
                       </label>
                     </div>
-                    <a href="#" class="button">Подробнее</a>
+                    <a href="#" class="button button--outline">
+                      <span class="button__line-top"></span>
+                      Подробнее
+                      <span class="button__line-bottom"></span>
+                    </a>
                   </div>
                 </div>
               </div>
-              <h3 class="product-card__name">Футболка голубая мужская</h3>
-              <p class="product-card__price"><span>2580</span>₽</p>
+              <h3 class="card__name">Футболка голубая мужская</h3>
+              <p class="price"><span>2580</span>₽</p>
             </article>
-            <article class="product-card">
-              <div class="product-card__picture">
+            <article class="card">
+              <div class="card__picture">
                 <img src="https://placehold.co/600x400" alt="">
                 <button class="favourite">
                   <svg class="favourite__icon">
                     <use xlink:href="./assets/sprite/sprite.svg#icon-heart"></use>
                   </svg>
                 </button>
-                <div class="product-card__detail">
-                  <div class="product-card__inner">
-                    <p class="product-card__text">Размеры:</p>
-                    <div class="product-card__size">
+                <div class="card__detail">
+                  <div class="card__inner">
+                    <p class="card__text">Размеры:</p>
+                    <div class="card__size size">
                       <label class="checkbox checkbox--circle">
                         <input type="checkbox" name="product-size">
                         <span>XS</span>
@@ -561,25 +747,29 @@
                         <span>L</span>
                       </label>
                     </div>
-                    <a href="#" class="button">Подробнее</a>
+                    <a href="#" class="button button--outline">
+                      <span class="button__line-top"></span>
+                      Подробнее
+                      <span class="button__line-bottom"></span>
+                    </a>
                   </div>
                 </div>
               </div>
-              <h3 class="product-card__name">Футболка голубая мужская</h3>
-              <p class="product-card__price"><span>2580</span>₽</p>
+              <h3 class="card__name">Футболка голубая мужская</h3>
+              <p class="price"><span>2580</span>₽</p>
             </article>
-            <article class="product-card">
-              <div class="product-card__picture">
+            <article class="card">
+              <div class="card__picture">
                 <img src="https://placehold.co/600x400" alt="">
                 <button class="favourite">
                   <svg class="favourite__icon">
                     <use xlink:href="./assets/sprite/sprite.svg#icon-heart"></use>
                   </svg>
                 </button>
-                <div class="product-card__detail">
-                  <div class="product-card__inner">
-                    <p class="product-card__text">Размеры:</p>
-                    <div class="product-card__size">
+                <div class="card__detail">
+                  <div class="card__inner">
+                    <p class="card__text">Размеры:</p>
+                    <div class="card__size size">
                       <label class="checkbox checkbox--circle">
                         <input type="checkbox" name="product-size">
                         <span>XS</span>
@@ -597,15 +787,19 @@
                         <span>L</span>
                       </label>
                     </div>
-                    <a href="#" class="button">Подробнее</a>
+                    <a href="#" class="button button--outline">
+                      <span class="button__line-top"></span>
+                      Подробнее
+                      <span class="button__line-bottom"></span>
+                    </a>
                   </div>
                 </div>
               </div>
-              <h3 class="product-card__name">Футболка голубая мужская</h3>
-              <p class="product-card__price"><span>2580</span>₽</p>
+              <h3 class="card__name">Футболка голубая мужская</h3>
+              <p class="price"><span>2580</span>₽</p>
             </article>
           </div>
-          <div class="pagination">
+          <div class="pagination mob-hidden">
             <ul class="pagination__list">
               <li class="pagination__item">
                 <a href="#" class="pagination__link">1</a>
@@ -643,6 +837,34 @@
       </div>
     </div>
   </section>
+  <div class="nav-mobile">
+    <nav class="nav-mobile__list">
+      <a href="#" class="nav-mobile__link">
+        <svg class="nav-mobile__icon">
+          <use xlink:href="./assets/sprite/sprite.svg#icon-search"></use>
+        </svg>
+        <span>Поиск</span>
+      </a>
+      <a href="#" class="nav-mobile__link">
+        <svg class="nav-mobile__icon">
+          <use xlink:href="./assets/sprite/sprite.svg#icon-cart"></use>
+        </svg>
+        <span>Корзина</span>
+      </a>
+      <a href="#" class="nav-mobile__link">
+        <svg class="nav-mobile__icon">
+          <use xlink:href="./assets/sprite/sprite.svg#icon-heart-transparent"></use>
+        </svg>
+        <span>Избранное</span>
+      </a>
+      <a href="#" class="nav-mobile__link">
+        <svg class="nav-mobile__icon">
+          <use xlink:href="./assets/sprite/sprite.svg#icon-person"></use>
+        </svg>
+        <span>Личный кабинет</span>
+      </a>
+    </nav>
+  </div>
 </main>
 <footer class="footer"></footer>
 

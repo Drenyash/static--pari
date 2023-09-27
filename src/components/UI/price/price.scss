@@ -1,0 +1,24 @@
+.price {
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 32px;
+  text-transform: uppercase;
+  color: $gray-dark;
+
+  @include r(1229) {
+    padding-left: 18px;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  &--big {
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 32px;
+    text-transform: uppercase;
+  }
+}

@@ -77,10 +77,13 @@
     }
 
     p {
-        margin-bottom: 2rem;
-        @include r(1200) {
-            margin-bottom: rem(30);
-        }
+        margin-bottom: 10px;
+        font-family: $font-second;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.8px;
+        color: $gray-dark;
     }
 
     ul,

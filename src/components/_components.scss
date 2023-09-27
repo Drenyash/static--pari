@@ -6,10 +6,17 @@
 @import "section/section";
 @import "breadcrumbs/breadcrumbs";
 @import "filter/filter";
+@import "filter/filter-mobile";
 @import "catalog/catalog";
 @import "sort/sort";
-@import "product-card/product-card";
+@import "sort/sort-mobile";
+@import "card/card";
 @import "pagination/pagination";
+@import "nav/nav-mobile";
+@import "product-card/product-card";
+@import "grid-card/grid-card";
+@import "title/title";
+@import "size-table/size-table";
 
 // UI
 @import "UI/ui";

@@ -1,0 +1,103 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 360px;
+
+  &__picture {
+    position: relative;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    width: 100%;
+    height: 385px;
+    padding: 40px 48px;
+    background-color: $light;
+
+    @include r(1529) {
+      margin-bottom: 10px;
+      padding: 32px 38px;
+      height: 305px;
+    }
+
+    @include r(1229) {
+      padding: 16px 19px;
+      height: 164px;
+    }
+
+    &:hover {
+      .card__detail {
+        opacity: 1;
+        z-index: 1;
+      }
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__name {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $gray-dark;
+
+    @include r(1229) {
+      margin-bottom: 10px;
+      padding-left: 18px;
+      font-size: 18px;
+      line-height: normal;
+      text-align: left;
+    }
+  }
+
+  &__detail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    opacity: 0;
+    z-index: -1;
+    background-color: rgba($light, 0.8);
+    transition: .2s linear;
+
+    @include r(1229) {
+      display: none;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__text {
+    margin-bottom: 15px;
+    font-family: $font-second;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.7px;
+    color: $gray;
+  }
+
+  &__size {
+    margin-bottom: 30px;
+  }
+}

@@ -1,96 +1,99 @@
 .product-card {
   display: flex;
   flex-direction: column;
-  align-content: center;
+  align-items: flex-start;
+  gap: 60px;
 
-  &__picture {
-    position: relative;
+  &__top {
     display: flex;
-    align-content: center;
-    justify-content: center;
-    margin-bottom: 25px;
-    width: 100%;
-    height: 385px;
-    padding: 40px 48px;
+    align-items: flex-start;
+    gap: 30px;
+  }
+
+  &__preview {
+    display: flex;
+    width: 1010px;
+    height: 580px;
     background-color: $light;
-
-    @include r(1530) {
-      margin-bottom: 10px;
-      padding: 32px 38px;
-      height: 305px;
-    }
-
-    &:hover {
-      .product-card__detail {
-        opacity: 1;
-        z-index: 1;
-      }
-    }
-
-    img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-    }
   }
 
-  &__name {
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 32px;
-    text-align: center;
-    text-transform: uppercase;
-    color: $gray-dark;
-  }
-
-  &__price {
-    font-size: 25px;
-    font-weight: 400;
-    line-height: 32px;
-    text-align: center;
-    text-transform: uppercase;
-    color: $gray-dark;
-  }
-
-  &__detail {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  &__info {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    opacity: 0;
-    z-index: -1;
-    background-color: rgba($light, 0.8);
-    transition: .2s linear;
+    gap: 9px;
+    margin-bottom: 30px;
   }
 
-  &__inner {
+  &__size-table {
     display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    margin: 0 auto;
-    text-align: center;
+    align-items: center;
+    gap: 10px;
+    font-family: $font-second;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.7px;
+    color: $primary;
+    cursor: pointer;
+  }
+
+  &__icon {
+    display: flex;
+    width: 25px;
+    height: 19px;
+  }
+
+  &__article {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.9px;
+    color: $gray;
+  }
+
+  &__title {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    color: $blue;
   }
 
   &__size {
     display: flex;
-    margin-bottom: 30px;
-    gap: 10px;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 45px;
   }
 
   &__text {
-    margin-bottom: 15px;
     font-family: $font-second;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 400;
+    line-height: normal;
     letter-spacing: 0.7px;
     color: $gray;
+  }
+
+  &__select {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    text-transform: uppercase;
+    color: $gray;
+  }
+
+  &__price {
+    margin-bottom: 30px;
+  }
+
+  &__head {
+    padding-bottom: 15px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid $gray-outline;
   }
 }

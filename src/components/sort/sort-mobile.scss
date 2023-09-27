@@ -1,0 +1,10 @@
+.sort-mobile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  @include rmin(1200) {
+    display: none;
+  }
+}

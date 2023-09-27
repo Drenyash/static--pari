@@ -17,11 +17,37 @@
   }
 
   &__item {
+    position: relative;
     display: flex;
     width: 100px;
     border: 1px solid $gray-outline;
     border-radius: 30px;
-    overflow: hidden;
+
+    &--before {
+      &::before {
+        position: absolute;
+        top: -25px;
+        left: 12px;
+        content: 'от';
+        font-family: $font-second;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 0.7px;
+      }
+    }
+
+    &--after {
+      &::before {
+        position: absolute;
+        top: -25px;
+        left: 12px;
+        content: 'до';
+        font-family: $font-second;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 0.7px;
+      }
+    }
 
     input {
       display: flex;

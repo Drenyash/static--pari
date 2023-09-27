@@ -3,10 +3,21 @@
   flex-direction: column;
   gap: 40px;
   width: 100%;
+
+  @include r(1229) {
+    gap: 20px;
+  }
   &__header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include r(1229) {
+      padding: 0 18px;
+      gap: 20px;
+      align-items: flex-start;
+      flex-direction: column;
+    }
   }
 
   &__title {
@@ -20,9 +31,18 @@
     display: grid;
     gap: 40px 30px;
     grid-template-columns: repeat(3, minmax(285px, 360px));
-    margin-bottom: 90px;
-    @include r(1530) {
-      margin-bottom: 50px;
+    margin-bottom: 50px;
+    @include r(1529) {
+      margin-bottom: 10px;
+    }
+    @include r(1229) {
+      margin-bottom: 0;
+      gap: 20px 15px;
+      grid-template-columns: repeat(auto-fill, minmax(153px, 285px));
+    }
+
+    @include r(768) {
+      grid-template-columns: repeat(2, minmax(153px, 285px));
     }
   }
 }

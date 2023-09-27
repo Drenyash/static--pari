@@ -1,14 +1,17 @@
 .filter {
-  position: sticky;
-  top: 20px;
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
   width: 100%;
   max-width: 360px;
 
-  @include r(1530) {
+  @include r(1529) {
     max-width: 285px;
+  }
+
+  @include r(1229) {
+    height: calc(100% - 50px);
+    overflow-y: auto;
   }
 
   &__block {
@@ -23,6 +26,13 @@
     &:first-child {
       padding-top: 0;
     }
+
+    @include r(1229) {
+      padding: 15px 0;
+      &:first-child {
+        padding-bottom: 5px;
+      }
+    }
   }
 
   &__title {
@@ -31,6 +41,10 @@
     line-height: 130%;
     text-transform: uppercase;
     color: $gray-dark;
+
+    @include r(1229) {
+      font-size: 20px;
+    }
   }
 
   &__inner {
@@ -41,6 +55,11 @@
     &--column {
       align-items: flex-start;
       flex-direction: column;
+    }
+
+    @include r(1229) {
+      gap: 8px;
+      flex-direction: row;
     }
   }
 
@@ -91,5 +110,10 @@
     font-weight: 400;
     line-height: 30px;
     color: $gray;
+
+    @include r(1229) {
+      font-size: 20px;
+      line-height: 120%;
+    }
   }
 }

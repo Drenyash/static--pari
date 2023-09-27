@@ -5,12 +5,37 @@
   cursor: pointer;
 
   input {
+    position: relative;
     display: flex;
     width: 17px;
     height: 16px;
     border: 1px solid $gray-outline;
     transition: .2s linear;
     background-color: $light;
+    &::before {
+      position: absolute;
+      top: 7px;
+      left: 2px;
+      content: "";
+      display: flex;
+      width: 5px;
+      height: 2px;
+      border-radius: 20px;
+      background-color: $light;
+      transform: rotate(45deg);
+    }
+    &::after {
+      position: absolute;
+      top: 6px;
+      left: 4px;
+      content: "";
+      display: flex;
+      width: 10px;
+      height: 2px;
+      border-radius: 20px;
+      background-color: $light;
+      transform: rotate(-45deg);
+    }
 
     &:checked {
       background-color: $primary;
@@ -24,6 +49,53 @@
     font-weight: 400;
     letter-spacing: 0.7px;
     color: $gray;
+  }
+
+  &--disabled {
+    pointer-events: none !important;
+    input {
+      background-color: $disabled !important;
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+    @include r(1229) {
+      span {
+        border-color: $disabled !important;
+        background-color: $disabled !important;
+        color: $text !important;
+      }
+    }
+    &.checkbox--circle {
+      span {
+        border-color: $disabled !important;
+        background-color: $disabled !important;
+        color: $text !important;
+      }
+    }
+  }
+
+  @include r(1229) {
+    input {
+      display: none;
+      &:checked ~ span {
+        border-color: $primary;
+      }
+    }
+    span {
+      display: flex;
+      justify-content: center;
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+      padding: 10px 11px;
+      text-align: center;
+      line-height: 1.25;
+      border-radius: 50%;
+      border: 1px solid $gray-outline;
+      background-color: $light;
+    }
   }
 
   &--circle {
@@ -42,6 +114,7 @@
       height: 40px;
       padding: 10px 11px;
       text-align: center;
+      line-height: 1.25;
       border-radius: 50%;
       border: 1px solid $gray-outline;
       background-color: $light;
