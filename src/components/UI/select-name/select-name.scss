@@ -1,0 +1,154 @@
+.select-name {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 30px;
+
+  &__button {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    text-transform: uppercase;
+    color: $gray;
+    cursor: pointer;
+    transition: .2s linear;
+
+    &.active {
+      svg {
+        transform: rotate(45deg);
+      }
+    }
+
+    &:hover {
+      opacity: .7;
+    }
+
+    @include r(1229) {
+      font-size: 20px;
+      line-height: normal;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    width: 18px;
+    height: 18px;
+    fill: $gray;
+  }
+
+  &__select,
+  &__input {
+    display: flex;
+    width: 100%;
+    padding: 15px 20px;
+    border: 1px solid $gray-outline;
+    background-color: $light;
+  }
+
+  &__wrapper {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    opacity: 0;
+    height: 0;
+    visibility: hidden;
+
+    &.active {
+      position: static;
+      opacity: 1;
+      height: auto;
+      visibility: visible;
+      transition: .2s linear;
+    }
+  }
+
+  &__input {
+    font-family: $font-second;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.7px;
+    color: $gray;
+  }
+
+  &__select {
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+
+    svg {
+      display: flex;
+      width: 10px;
+      height: 10px;
+      fill: $gray;
+    }
+
+    &.active {
+      border-color: $primary;
+      svg {
+        transform: rotate(180deg);
+      }
+      .select-name__dropdown {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  &__dropdown {
+    position: absolute;
+    top: 101%;
+    left: 0;
+    display: flex;
+    padding: 10px 0;
+    flex-direction: column;
+    width: 100%;
+    background-color: $light;
+    border: 1px solid $light;
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+    cursor: auto;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7.5px 20px;
+    font-family: $font-second;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.7px;
+    color: $gray;
+    cursor: pointer;
+  }
+
+  &__name {
+
+  }
+
+  &__number {
+
+  }
+
+  &__text {
+    font-family: $font-second;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.8px;
+    color: $blue;
+  }
+}

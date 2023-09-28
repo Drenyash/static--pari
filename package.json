@@ -50,6 +50,7 @@
   "dependencies": {
     "axios": "^0.27.2",
     "modern-css-reset": "^1.4.0",
+    "nouislider": "^15.7.1",
     "swiper": "^8.4.4",
     "the-new-css-reset": "^1.7.3"
   },

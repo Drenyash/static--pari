@@ -4,17 +4,40 @@
   align-items: flex-start;
   gap: 60px;
 
+  @include r(1229) {
+    gap: 30px;
+  }
+
   &__top {
     display: flex;
     align-items: flex-start;
     gap: 30px;
+
+    @include r(1229) {
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      padding: 0 18px;
+    }
   }
 
   &__preview {
     display: flex;
-    width: 1010px;
-    height: 580px;
-    background-color: $light;
+    gap: 101px;
+
+    @include r(1529) {
+      gap: 20px;
+    }
+
+    @include r(1229) {
+      width: 100%;
+      height: 306px;
+    }
+  }
+
+  &__detail {
+    display: flex;
+    flex-direction: column;
   }
 
   &__info {
@@ -22,6 +45,18 @@
     flex-direction: column;
     gap: 9px;
     margin-bottom: 30px;
+    order: -2;
+
+    @include r(1229) {
+      margin-bottom: 10px;
+      align-items: center;
+    }
+  }
+
+  .product-card__about {
+    @include r(1229) {
+      padding: 0 18px;
+    }
   }
 
   &__size-table {
@@ -35,6 +70,12 @@
     letter-spacing: 0.7px;
     color: $primary;
     cursor: pointer;
+
+    @include r(1229) {
+      grid-column: 2/3;
+      grid-row: 1/2;
+      justify-self: end;
+    }
   }
 
   &__icon {
@@ -49,6 +90,10 @@
     line-height: normal;
     letter-spacing: 0.9px;
     color: $gray;
+
+    @include r(1229) {
+      font-size: 14px;
+    }
   }
 
   &__title {
@@ -57,6 +102,10 @@
     line-height: normal;
     text-transform: uppercase;
     color: $blue;
+
+    @include r(1229) {
+      font-size: 20px;
+    }
   }
 
   &__size {
@@ -64,6 +113,17 @@
     flex-direction: column;
     gap: 30px;
     margin-bottom: 45px;
+
+    @include r(1229) {
+      display: grid;
+      grid-auto-flow: dense;
+      grid-template-columns: auto auto;
+      gap: 15px;
+      margin-bottom: 25px;
+      .size {
+        grid-column: span 2;
+      }
+    }
   }
 
   &__text {
@@ -73,27 +133,28 @@
     line-height: normal;
     letter-spacing: 0.7px;
     color: $gray;
-  }
 
-  &__select {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    margin-bottom: 30px;
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 32px;
-    text-transform: uppercase;
-    color: $gray;
+    @include r(1229) {
+      order: -2;
+    }
   }
 
   &__price {
     margin-bottom: 30px;
+
+    @include r(1229) {
+      order: -1;
+      margin: 0 auto 25px;
+    }
   }
 
   &__head {
     padding-bottom: 15px;
     margin-bottom: 40px;
     border-bottom: 1px solid $gray-outline;
+
+    @include r(1229) {
+      margin-bottom: 15px;
+    }
   }
 }

@@ -2,4 +2,9 @@
   display: grid;
   gap: 40px 30px;
   grid-template-columns: repeat(4, 1fr);
+
+  @include r(1229) {
+    gap: 20px 15px;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

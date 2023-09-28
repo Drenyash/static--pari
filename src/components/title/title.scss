@@ -4,4 +4,13 @@
   line-height: normal;
   text-transform: uppercase;
   color: $blue;
+
+  @include r(1229) {
+    font-size: 32px;
+    padding: 0 18px;
+  }
+
+  &--small {
+    font-size: 32px;
+  }
 }

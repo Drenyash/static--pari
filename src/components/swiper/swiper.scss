@@ -1,0 +1,93 @@
+.section .swiper {
+  overflow: visible;
+
+  @include r(1229) {
+    overflow: hidden;
+  }
+
+  &-slide {
+    @include r(576) {
+      width: 153px;
+    }
+  }
+
+  &--picture {
+    display: flex;
+    width: 750px;
+    height: auto;
+    overflow: hidden;
+
+    @include r(1529) {
+      width: 630px;
+    }
+
+    @include r(1229) {
+      width: 285px;
+    }
+  }
+
+  &--thumbnails {
+    position: relative;
+    flex-shrink: 0;
+    width: 160px;
+    height: 580px;
+    padding: 40px 0;
+    overflow-y: hidden;
+
+    @include r(1229) {
+      display: none;
+    }
+
+    .swiper-slide {
+      width: 100%;
+      height: 130px;
+      overflow: hidden;
+      cursor: pointer;
+      border: 1px solid $light;
+    }
+    .swiper-slide-thumb-active {
+      border-color: $primary;
+    }
+  }
+}
+
+.swiper-button-thumb {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $light;
+  border-bottom: 1px solid $primary;
+  box-shadow: 0 4px 10px 0 rgba(182, 196, 199, 0.25);
+  cursor: pointer;
+
+  svg {
+    display: flex;
+    width: 12px;
+    height: 6px;
+    fill: $primary;
+  }
+
+  &--next {
+    bottom: 0;
+  }
+
+  &--prev {
+    top: 0;
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  &--disabled {
+    border-color: $light;
+
+    svg {
+      fill: $gray-outline
+    }
+  }
+}

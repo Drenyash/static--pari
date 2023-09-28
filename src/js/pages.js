@@ -5,32 +5,35 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const head = fs.readFileSync("src/includes/head.html");
 const sectionHeader = fs.readFileSync("src/includes/section-header.html");
 const sectionFooter = fs.readFileSync("src/includes/section-footer.html");
+const hidden = fs.readFileSync("src/includes/hidden.html");
 const temp = fs.readFileSync("src/includes/temp.html");
 
 // Pages
 module.exports = [
-    new HtmlWebpackPlugin({
-        template: "./src/index.html",
-        filename: "index.html",
-        inject: "body",
-        title: "Корзина Пари",
-        head,
-        temp
-    }),
-    new HtmlWebpackPlugin({
-        template: "./src/pages/product-page.html",
-        filename: "product-page.html",
-        inject: "body",
-        title: "Карточка товара",
-        head,
-        temp
-    }),
-    new HtmlWebpackPlugin({
-        template: "./src/pages/blocks.html",
-        filename: "blocks.html",
-        inject: "body",
-        title: "Блоки на сайте",
-        head,
-        temp
-    })
+	new HtmlWebpackPlugin({
+		template: "./src/index.html",
+		filename: "index.html",
+		inject: "body",
+		title: "Корзина Пари",
+		head,
+		temp,
+		hidden
+	}),
+	new HtmlWebpackPlugin({
+		template: "./src/pages/product-page.html",
+		filename: "product-page.html",
+		inject: "body",
+		title: "Карточка товара",
+		head,
+		temp,
+		hidden
+	}),
+	new HtmlWebpackPlugin({
+		template: "./src/pages/blocks.html",
+		filename: "blocks.html",
+		inject: "body",
+		title: "Блоки на сайте",
+		head,
+		temp
+	})
 ];

@@ -1,4 +1,5 @@
 .size-table {
+  position: relative;
   display: flex;
   flex-direction: column;
   padding: 50px;
@@ -7,6 +8,7 @@
   background-color: $light;
 
   &__head {
+    margin-bottom: 10px;
     font-size: 24px;
     font-weight: 400;
     line-height: normal;
@@ -41,5 +43,32 @@
       letter-spacing: 0.8px;
       color: $gray;
     }
+  }
+
+  &__description {
+    box-shadow: 0px 4px 30px 0px rgba(110, 131, 151, 0.25);
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    width: max-content;
+    padding: 19px 30px;
+    font-family: $font-second;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.8px;
+    color: $gray;
+  }
+
+  &__picture {
+    display: flex;
+    flex-shrink: 0;
+    width: 390px;
+    height: 445px;
   }
 }

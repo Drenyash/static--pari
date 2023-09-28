@@ -1,4 +1,9 @@
 .mbm {
+    &-0{
+        @include r(1229) {
+            margin-bottom: rem(0);
+        }
+    }
     &-1 {
         @include r(1200) {
             margin-bottom: rem(1);

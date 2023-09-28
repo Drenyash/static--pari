@@ -4,6 +4,17 @@
   align-items: center;
   max-width: 360px;
 
+  @include r(1229) {
+    align-items: flex-start;
+  }
+
+  .price {
+    @include r(1229) {
+      padding-left: 18px;
+      align-self: flex-start;
+    }
+  }
+
   &__picture {
     position: relative;
     display: flex;

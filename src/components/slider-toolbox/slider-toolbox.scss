@@ -1,0 +1,48 @@
+.slider-toolbox {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+
+  @include r(1229) {
+    display: none;
+  }
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid $gray-outline;
+    cursor: pointer;
+    transition: .2s linear;
+    &:hover {
+      background-color: $gray-outline;
+
+      svg {
+        fill: $light;
+      }
+    }
+    &--prev {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+
+    &--next {
+
+    }
+
+    svg {
+      display: flex;
+      width: 16px;
+      height: 14px;
+      fill: $gray-outline;
+    }
+
+    &--disabled {
+      pointer-events: none;
+      opacity: .5;
+    }
+  }
+}

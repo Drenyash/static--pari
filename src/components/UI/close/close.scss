@@ -1,0 +1,13 @@
+.close {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  transform: rotate(45deg);
+  cursor: pointer;
+  svg {
+    display: flex;
+    width: 24px;
+    height: 24px;
+    fill: $gray;
+  }
+}
