@@ -8,15 +8,16 @@
     gap: 20px;
   }
   &__header {
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto;
     justify-content: space-between;
+    gap: 32px;
 
     @include r(1229) {
       padding: 0 18px;
       gap: 20px;
-      align-items: flex-start;
-      flex-direction: column;
+      grid-template-columns: 1fr;
     }
   }
 

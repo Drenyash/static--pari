@@ -4,9 +4,6 @@
     grid-auto-flow: dense;
     grid-template-rows: minmax(0, 1fr);
     grid-template-columns:  minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
-    @include r(1200) {
-        //gap: 0;
-    }
     &__col {
         position: relative;
         &--1 {

@@ -13,4 +13,12 @@
   &--small {
     font-size: 32px;
   }
+  
+  &--offset {
+    margin-bottom: 50px;
+    
+    @include r(1229) {
+      margin-bottom: 20px;
+    }
+  }
 }

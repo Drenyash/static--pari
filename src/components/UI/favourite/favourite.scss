@@ -11,10 +11,8 @@
     right: 12px;
   }
 
-  &.active {
-    .favourite__icon {
-      fill: $primary
-    }
+  &.active &__icon {
+    fill: $primary
   }
 
   &__icon {

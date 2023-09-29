@@ -4,6 +4,10 @@
   justify-content: space-between;
   width: 100%;
 
+  @include r(1229) {
+    grid-column: span 2;
+  }
+  
   @include rmin(1200) {
     display: none;
   }

@@ -2,9 +2,14 @@
 <html lang="ru">
 
 <head>
-	<%= htmlWebpackPlugin.options.head %>
-	<title><%= htmlWebpackPlugin.options.title %></title>
-</head>
+	<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+	<title>Карточка товара</title>
+<link href="./css/main.css" rel="stylesheet"></head>
 
 <body class="body">
 
@@ -874,8 +879,172 @@
 </main>
 <footer class="footer"></footer>
 
-<%= htmlWebpackPlugin.options.hidden %>
-<%= htmlWebpackPlugin.options.temp %>
-</body>
+<div class="modal" data-modal>
+  <div class="modal__container">
+    <div class="size-table">
+      <p class="size-table__head">Таблица размеров</p>
+      <h2 class="title title--small mb-20">Размеры мужской одежды</h2>
+      <div class="line"></div>
+      <div class="size-table__block pt-20 pb-25">
+        <div class="size-table__description">
+          <ul class="size-table__list">
+            <li class="size-table__item">Размер</li>
+            <li class="size-table__item">Грудь, см</li>
+            <li class="size-table__item">Талия, см</li>
+            <li class="size-table__item">Бедра, см</li>
+            <li class="size-table__item">Шея, см</li>
+          </ul>
+        </div>
+        <table>
+          <tbody>
+          <tr>
+            <td>XS</td>
+            <td>S</td>
+            <td>M</td>
+            <td>L</td>
+            <td>XL</td>
+            <td>XXL</td>
+            <td>3XL</td>
+          </tr>
+          <tr>
+            <td>82</td>
+            <td>86</td>
+            <td>91</td>
+            <td>96</td>
+            <td>101</td>
+            <td>107</td>
+            <td>113</td>
+          </tr>
+          <tr>
+            <td>65</td>
+            <td>68</td>
+            <td>74</td>
+            <td>80</td>
+            <td>86</td>
+            <td>92</td>
+            <td>98</td>
+          </tr>
+          <tr>
+            <td>93</td>
+            <td>96</td>
+            <td>101</td>
+            <td>106</td>
+            <td>112</td>
+            <td>118</td>
+            <td>124</td>
+          </tr>
+          <tr>
+            <td>36-38</td>
+            <td>38-39</td>
+            <td>39-40</td>
+            <td>40-42</td>
+            <td>42-44</td>
+            <td>44-46</td>
+            <td>46-48</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="size-table__head">Как снять мерки</p>
+      <div class="line"></div>
+      <div class="size-table__block pt-25">
+        <div class="editor editor--sizes editor--primary">
+          <p>Чтобы выбрать правильный размер одежды, рекомендуем снять следующие ниже мерки при помощи сантиметровой ленты.</p>
+          <h3>1. Обхват груди</h3>
+          <p>Сантимертровая лента должна проходить по наиболее выступающим точкам груди, сбоку - под подмышечными впадинами, обхватывая лопатки сзади.</p>
+          <h3>2. Обхват талии</h3>
+          <p>Измеряется горизонтально в самой узкой части талии. При измерении лента должна плотно (без натяжения) прилегать к телу.</p>
+          <h3>3. Обхват бедер</h3>
+          <p>Сантиметровая лента проходит строго горизонтально по наиболее выступающим точкам ягодиц.</p>
+        </div>
+        <picture class="size-table__picture">
+          <img src="./assets/images/measurements.jpg" alt="">
+        </picture>
+      </div>
+      <div class="close" data-close>
+        <svg>
+          <use xlink:href="./assets/sprite/sprite.svg#icon-plus"></use>
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="alert alert--approved">
+  <div class="alert__picture">
+    <svg class="alert__icon">
+      <use xlink:href="./assets/sprite/sprite.svg#icon-checked"></use>
+    </svg>
+  </div>
+  <h2 class="alert__title">Спасибо за покупку!</h2>
+  <p class="alert__text">
+    Вам придет уведомление на почту, когда ваш заказ будет оформлен
+  </p>
+  <div class="close" data-close>
+    <svg>
+      <use xlink:href="./assets/sprite/sprite.svg#icon-plus"></use>
+    </svg>
+  </div>
+</div>
+
+<div class="alert alert--rejected">
+  <div class="alert__picture">
+    <svg class="alert__icon">
+      <use xlink:href="./assets/sprite/sprite.svg#icon-plus"></use>
+    </svg>
+  </div>
+  <h2 class="alert__title">Операция прервана</h2>
+  <p class="alert__text">
+    Попробуйте позже
+  </p>
+  <div class="close" data-close>
+    <svg>
+      <use xlink:href="./assets/sprite/sprite.svg#icon-plus"></use>
+    </svg>
+  </div>
+</div>
+
+<div class="alert alert--cart" data-alert-basket>
+  <p class="alert__text">
+    Вы добавили товар в Корзину:
+  </p>
+  <h2 class="alert__title">Футболка голубая мужская</h2>
+  <div class="close" data-close>
+    <svg>
+      <use xlink:href="./assets/sprite/sprite.svg#icon-plus"></use>
+    </svg>
+  </div>
+</div>
+
+<!-- Это временная секция, здесь ссылки на все страницы. На продакшене ее не будет -->
+<section class="section">
+    <div class="container">
+        <style>
+            .temp {
+                gap: 15px;
+                display: flex;
+            }
+
+            .temp__link {
+                color: inherit;
+                font-family: 'Manrope', sans-serif;
+                font-size: 16px;
+                text-decoration: underline;
+            }
+
+            .temp__link:hover {
+                text-decoration: none;
+            }
+        </style>
+        <div class="temp">
+            <a href="./index.html" class="temp__link">Главная</a>
+            <a href="./product-page.html" class="temp__link">Карточка товара</a>
+            <a href="./favourites.html" class="temp__link">Избранные товары</a>
+            <a href="./blocks.html" class="temp__link">Блоки на сайте</a>
+        </div>
+    </div>
+</section>
+
+<script defer src="js/bundle.js"></script></body>
 
 </html>

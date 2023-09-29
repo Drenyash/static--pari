@@ -25,6 +25,8 @@
   
   @include r(1229) {
     width: 100%;
+    max-width: 93%;
+    margin: 0 auto;
     order: 2;
   }
 }

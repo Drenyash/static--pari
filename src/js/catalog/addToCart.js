@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		const getData = () => {
 			const elements = [...cardDetail.querySelectorAll("input")];
 			const data = new FormData;
+
 			for (let i = 0; i < elements.length; i++) {
 				if (elements[i].checked) {
 					data.append("size", elements[i].value);

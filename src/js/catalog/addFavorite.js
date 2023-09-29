@@ -3,6 +3,7 @@ import axios from "axios";
 (function addFavorite() {
 	document.addEventListener("DOMContentLoaded", () => {
 		const cards = document.querySelectorAll(".card");
+		const userId = "1";
 		const url = "/api/";
 
 		cards.forEach(card => {
@@ -13,6 +14,7 @@ import axios from "axios";
 			favoriteButton.addEventListener("click", function() {
 				this.classList.toggle("active");
 				data.append("id", id);
+				data.append("userId", userId);
 				sendData(data);
 			});
 		});

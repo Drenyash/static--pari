@@ -29,6 +29,15 @@ module.exports = [
 		hidden
 	}),
 	new HtmlWebpackPlugin({
+		template: "./src/pages/favourites.html",
+		filename: "favourites.html",
+		inject: "body",
+		title: "Избранные товары",
+		head,
+		temp,
+		hidden
+	}),
+	new HtmlWebpackPlugin({
 		template: "./src/pages/blocks.html",
 		filename: "blocks.html",
 		inject: "body",

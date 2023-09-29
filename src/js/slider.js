@@ -1,4 +1,4 @@
-import Swiper, { EffectFade, Mousewheel, Navigation, Thumbs } from "swiper";
+import Swiper, { EffectFade, Mousewheel, Navigation, Pagination, Thumbs } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -48,12 +48,16 @@ document.addEventListener("DOMContentLoaded", () => {
 	});
 
 	const swiper = new Swiper("[data-swiper-picture]", {
-		modules: [Thumbs, EffectFade],
+		modules: [Thumbs, EffectFade, Pagination],
 		slidesPerView: 1,
 		effect: "fade",
 		thumbs: {
 			swiper: swiperThumbnails
-		}
+		},
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+		},
 	});
 
 	// const swiper = new Swiper(".mySwiper", {

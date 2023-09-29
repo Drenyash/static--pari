@@ -1,0 +1,49 @@
+.search {
+  display: flex;
+  flex-shrink: 0;
+  grid-column: span 2;
+  width: 100%;
+  background-color: $light;
+  
+  &__input {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 23px 25px;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    color: $gray;
+    
+    @include r(1229) {
+      padding: 13px 21px;
+    }
+  }
+  
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    
+    @include r(1229) {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  
+  &__icon {
+    display: flex;
+    width: 20px;
+    height: 22px;
+    fill: $primary;
+    
+    @include r(1229) {
+      width: 17px;
+      height: 19px;
+    }
+  }
+}

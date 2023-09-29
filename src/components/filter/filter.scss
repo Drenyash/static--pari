@@ -3,6 +3,7 @@
   flex-direction: column;
   flex-shrink: 0;
   width: 100%;
+  min-width: 320px;
   max-width: 360px;
 
   @include r(1529) {
@@ -10,8 +11,11 @@
   }
 
   @include r(1229) {
+    padding-left: 19px;
+    padding-right: 16px;
     height: calc(100% - 50px);
     overflow-y: auto;
+    overflow-x: hidden;
   }
 
   &__block {

@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	if (!modal) return;
 	const openModal = document.querySelector("[data-open-modal]");
 	const closeModal = modal.querySelector("[data-close]");
+	if (!openModal || !closeModal) return;
 
 	const activeModal = () => {
 		modal.classList.toggle("active");

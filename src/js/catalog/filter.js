@@ -5,10 +5,12 @@ import axios from "axios";
 		const filter = document.querySelectorAll("[data-filter]");
 		const filterMobile = document.querySelector(".filter-mobile");
 		const openFilter = document.querySelector(".open-filter");
+		if (!openFilter) return;
 		const url = "/api/";
 
 		openFilter.addEventListener("click", () => {
 			filterMobile.classList.add("active");
+			if (filterMobile.classList.contains("active")) document.querySelector("body").classList.add("fixed-size");
 		});
 
 		if (!filter) return;
@@ -35,6 +37,9 @@ import axios from "axios";
 					}
 				}
 				data.append("size", JSON.stringify(sizesArray));
+				for (let pair of data.entries()) {
+					console.log(pair[0] + ', ' + pair[1]);
+				}
 				return data;
 			};
 
@@ -49,6 +54,10 @@ import axios from "axios";
 			filter.addEventListener("submit", (evt) => {
 				evt.preventDefault();
 				sendData();
+				if (filterMobile.classList.contains("active")) {
+					filterMobile.classList.remove("active");
+					document.querySelector("body").classList.remove("fixed-size");
+				}
 			});
 		});
 	});
